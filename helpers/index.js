@@ -14,6 +14,16 @@ function formatDate(d) {
   return value;
 }
 
+/**
+* @method isDivisor2
+* @description Is multiple of 2
+* @param {*} num1 index
+*/
+function isDivisor2(num1) {
+  return num1 % 2 === 0;
+}
+
 module.exports = {
   formatDate,
+  isDivisor2,
 };

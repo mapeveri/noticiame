@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-body">
+    <div class="card-title">Noticiame, el mejor sitio web de noticias mundiales</div>
+
+    <div class="row">
+      <div class="col-4">
+        <div class="list-group">
+          <h4> Sociedad </h4>
+          {{#each noticesSociedad as |n|}}
+            {{> notice notice=n }}
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="col-4">
+        <h4> Politica </h4>
+        <div class="list-group">
+          {{#each noticesPolitica as |n|}}
+            {{> notice notice=n }}
+          {{/each}}
+        </div>
+      </div>
+
+      <div class="col-4">
+        <h4> Tecnología </h4>
+        <div class="list-group">
+          {{#each noticesTecno as |n|}}
+            {{> notice notice=n }}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+

@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const favicon = require('serve-favicon');
 const exphbs = require('express-handlebars');
-const { formatDate } = require('./helpers');
+const { formatDate, isDivisor2 } = require('./helpers');
 
 require('./config');
 
@@ -13,13 +13,16 @@ const { PORT } = process.env;
 const hbs = exphbs.create({
   helpers: {
     formatDate,
+    isDivisor2,
   },
   defaultLayout: 'main',
+  extname: '.hbs',
+  partialsDir: path.join(__dirname, '/views/partials/'),
 });
 
 // Configure express to use handlebars templates
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+app.engine('.hbs', hbs.engine);
+app.set('view engine', '.hbs');
 
 // Favicon
 app.use(favicon(path.join(`${process.cwd()}/public/favicon.ico`)));

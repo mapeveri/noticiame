@@ -1,0 +1,12 @@
+<a href="{{ notice.url }}" class="list-group-item list-group-item-action {{#if (isDivisor2 @index) }}list-group-item-secondary{{/if}}" target="_blank">
+  <div class="d-flex w-100 justify-content-between">
+    <h5 class="mb-1">{{ notice.title }}</h5>
+  </div>
+  <small>{{ notice.origin }} > {{ formatDate notice.created }}</small>
+  <p class="mb-1">{{ notice.content }}</p>
+  <small>
+    {{#each notice.categories as |c| }}
+      {{ c.name }}
+    {{/each}}
+  </small>
+</a>
