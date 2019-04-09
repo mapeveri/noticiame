@@ -23,7 +23,17 @@ function isDivisor2(num1) {
   return num1 % 2 === 0;
 }
 
+/**
+* @method capitalize
+* @description Capitalize string
+* @param {*} value
+*/
+function capitalize(value) {
+  return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
 module.exports = {
   formatDate,
   isDivisor2,
+  capitalize,
 };

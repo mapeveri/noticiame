@@ -22,4 +22,16 @@ module.exports = (app) => {
       noticesSociedad,
     });
   });
+
+  // Route category
+  app.get('/tag/:tag', async (req, res) => {
+    const { tag } = req.params;
+    const notices = await Notice.find({ 'categories.name': tag })
+      .sort([['created', -1]]);
+
+    res.render('tag', {
+      notices,
+      tag,
+    });
+  });
 };

@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const favicon = require('serve-favicon');
 const exphbs = require('express-handlebars');
-const { formatDate, isDivisor2 } = require('./helpers');
+const { formatDate, isDivisor2, capitalize } = require('./helpers');
 
 require('./config');
 
@@ -14,6 +14,7 @@ const hbs = exphbs.create({
   helpers: {
     formatDate,
     isDivisor2,
+    capitalize,
   },
   defaultLayout: 'main',
   extname: '.hbs',

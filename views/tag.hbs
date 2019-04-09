@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-body">
+    <div class="card-title">{{ capitalize tag }}</div>
+    <hr>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="list-group">
+          {{#each notices as |n|}}
+            {{> notice notice=n }}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
