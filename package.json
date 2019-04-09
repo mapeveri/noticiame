@@ -1,0 +1,45 @@
+{
+  "name": "noticiame",
+  "version": "1.0.0",
+  "description": "Noticiame webpage",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon app.js",
+    "lint": "eslint .",
+    "test": "npm run unit",
+    "unit": "nyc mocha -R spec test/unit/specs/*.js --exit"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "Martín Peveri",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.3",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "moment": "^2.24.0",
+    "mongoose": "^5.5.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "mocha": "^6.1.2",
+    "nodemon": "^1.18.11",
+    "nyc": "^13.3.0",
+    "sinon": "^7.3.1"
+  }
+}

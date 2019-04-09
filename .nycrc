@@ -1,0 +1,29 @@
+{
+  "require": [
+    "babel-register",
+    "babel-polyfill"
+  ],
+  "exclude": [
+    "test/unit/**/*.js"
+    "config/*.js",
+  ],
+  "include": [
+    "crons/*.js",
+    "models/*.js",
+    "routes/*.js",
+    "helpers/*.js",
+  ],
+  "reporter": [
+    "text-summary",
+    "html",
+    "lcov"
+  ],
+  "extension": [
+    ".js"
+  ],
+  "cache": false,
+  "report-dir": "test/unit/coverage",
+  "sourceMap": false,
+  "instrument": false,
+  "all": true
+}

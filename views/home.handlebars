@@ -1,0 +1,24 @@
+<h3>Noticiame, el mejor sitio web de noticias mundiales</h3>
+<hr>
+
+<div class="card">
+  <div class="card-body">
+    <div class="list-group">
+      {{#each notices as |notice|}}
+        <a href="{{ notice.url }}" class="list-group-item list-group-item-action" target="_blank">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ notice.title }}</h5>
+            <small>{{ notice.origin }} > {{ formatDate notice.created }}</small>
+          </div>
+          <p class="mb-1">{{ notice.content }}</p>
+          <small>
+            {{#each notice.categories as |c| }}
+              {{ c.name }}
+            {{/each}}
+          </small>
+        </a>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
